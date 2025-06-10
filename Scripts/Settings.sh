@@ -75,8 +75,10 @@ if [[ $WRT_TARGET == *"X86"* ]]; then
 
 	# 这个变量决定了内核分区的大小，通常是 16MB 或 32MB
       	echo "CONFIG_TARGET_KERNEL_PARTSIZE=16" >> .config
-	3965U优化
-	cat <<EOF > .config
+fi
+
+# 3965U优化
+cat <<EOF > .config
 CONFIG_TARGET_x86=y
 CONFIG_TARGET_x86_64=y
 CONFIG_TARGET_x86_64_Generic=y
