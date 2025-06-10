@@ -152,11 +152,15 @@ fix_default_set() {
     # install -Dm755 "$BASE_PATH/patches/990_set_argon_primary" "$BUILD_DIR/package/base-files/files/etc/uci-defaults/990_set_argon_primary"
     # install -Dm755 "$BASE_PATH/patches/991_custom_settings" "$BUILD_DIR/package/base-files/files/etc/uci-defaults/991_custom_settings"
 
-    if [ -f "$BUILD_DIR/package/emortal/autocore/files/tempinfo" ]; then
-        if [ -f "$BASE_PATH/patches/tempinfo" ]; then
-            \cp -f "$BASE_PATH/patches/tempinfo" "$BUILD_DIR/package/emortal/autocore/files/tempinfo"
-        fi
-    fi
+    cp "./patches/991_custom_settings" "$BUILD_DIR/package/base-files/files/etc/uci-defaults/991_custom_settings.sh"
+		chmod +x "$BUILD_DIR/package/base-files/files/etc/uci-defaults/991_custom_settings.sh"
+
+
+    # if [ -f "$BUILD_DIR/package/emortal/autocore/files/tempinfo" ]; then
+    #     if [ -f "$BASE_PATH/patches/tempinfo" ]; then
+    #         \cp -f "$BASE_PATH/patches/tempinfo" "$BUILD_DIR/package/emortal/autocore/files/tempinfo"
+    #     fi
+    # fi
 }
 
 # 添加系统升级时的备份信息
