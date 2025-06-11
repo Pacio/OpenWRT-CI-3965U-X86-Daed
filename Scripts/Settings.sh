@@ -64,7 +64,7 @@ fi
 if [[ $WRT_TARGET == *"X86"* ]]; then
 	echo "CONFIG_TARGET_OPTIONS=y" >> ./.config
  	# 通用 x86_64 优化
-	echo "CONFIG_TARGET_OPTIMIZATION=\"-O2 -pipe -march=x86-64 -mtune=generic\"" >> ./.config
+	# echo "CONFIG_TARGET_OPTIMIZATION=\"-O2 -pipe -march=x86-64 -mtune=generic\"" >> ./.config
  	# 针对 Intel 或 AMD 处理器 适用于 Intel 6 代及更新（如 Coffee Lake、Comet Lake、Tiger Lake 等）
   	# echo "CONFIG_TARGET_OPTIMIZATION=\"-O2 -pipe -march=skylake -mtune=skylake -mfpmath=sse -msse4.2 -mavx2 -mfma\"" >> ./.config
   	# AMD Ryzen（Zen 及更新）适用于 AMD Ryzen（Zen、Zen 2、Zen 3、Zen 4）针对 Zen 3 架构优化（如果是 Zen 2，改为 znver2，Zen 4 用 znver4）优化 AVX2 代码
@@ -85,6 +85,8 @@ CONFIG_TARGET_x86_64_Generic=y
 
 # 优化架构为 Skylake（3965U）
 CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O2 -pipe -fstack-protector-strong -fPIC -fvisibility=hidden"
+
+# CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O3 -pipe -flto -fno-semantic-interposition -fvisibility=hidden -falign-functions=32 -fgraphite-identity -floop-nest-optimize -funsafe-loop-optimizations -funroll-loops -fira-loop-pressure"
 
 # 启用 Link Time Optimization
 CONFIG_USE_LTO=y
