@@ -236,5 +236,5 @@ echo "CONFIG_PACKAGE_luci-app-nfs=y" >> ./.config
 echo "CONFIG_PACKAGE_zoneinfo-all=y" >> ./.config
 # Caddy
 echo "CONFIG_PACKAGE_luci-app-caddy=y" >> ./.config
-luci-app-turboacc 适用于官方openwrt(22.03/23.05) firewall4的turboacc 包括以下功能：软件流量分载、Shortcut-FE、全锥型 NAT、BBR 拥塞控制算法
+# luci-app-turboacc 适用于官方openwrt(22.03/23.05) firewall4的turboacc 包括以下功能：软件流量分载、Shortcut-FE、全锥型 NAT、BBR 拥塞控制算法
 echo "CONFIG_PACKAGE_luci-app-turboacc=y" >> ./.config
