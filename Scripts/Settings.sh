@@ -84,9 +84,9 @@ CONFIG_TARGET_x86_64=y
 CONFIG_TARGET_x86_64_Generic=y
 
 # 优化架构为 Skylake（3965U）
-CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O2 -pipe -fstack-protector-strong -fPIC -fvisibility=hidden"
+# CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O2 -pipe -fstack-protector-strong -fPIC -fvisibility=hidden"
 
-# CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O3 -pipe -flto -fno-semantic-interposition -fvisibility=hidden -falign-functions=32 -fgraphite-identity -floop-nest-optimize -funsafe-loop-optimizations -funroll-loops -fira-loop-pressure"
+CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O3 -pipe -flto -fno-semantic-interposition -fvisibility=hidden -falign-functions=32 -fgraphite-identity -floop-nest-optimize -funsafe-loop-optimizations -funroll-loops -fira-loop-pressure"
 
 # 启用 Link Time Optimization
 CONFIG_USE_LTO=y
