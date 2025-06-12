@@ -88,23 +88,9 @@ CONFIG_TARGET_x86_64_Generic=y
 
 # CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O3 -pipe -flto -fno-semantic-interposition -fvisibility=hidden -falign-functions=32 -fgraphite-identity -floop-nest-optimize -funsafe-loop-optimizations -funroll-loops -fira-loop-pressure"
 
-# CONFIG_TARGET_OPTIMIZATION="-O3 -pipe -march=skylake -mtune=skylake \
-# -flto=auto -fuse-linker-plugin \
-# -fno-semantic-interposition -fvisibility=hidden \
-# -falign-functions=64 -falign-jumps=32 -falign-loops=32 \
-# -fgraphite-identity -floop-nest-optimize \
-# -funswitch-loops -fno-stack-protector \
-# -funsafe-loop-optimizations -funroll-loops -fira-loop-pressure \
-# -fprefetch-loop-arrays -fstrict-aliasing -fomit-frame-pointer \
-# -fipa-pta -fdevirtualize-at-ltrans -ftracer -ftree-loop-distribution \
-# -ffast-math -fassociative-math -freciprocal-math -fno-math-errno \
-# -fmerge-all-constants -frename-registers \
-# -fsplit-loops -fsched-pressure \
-# -mtune=skylake -mrecip -mfma -mavx2 -mbmi2 -mlzcnt -mpopcnt
-
-CONFIG_TARGET_OPTIMIZATION="-Ofast -march=native -flto=auto -fuse-linker-plugin -fwhole-program \
--fno-semantic-interposition -fvisibility=hidden \
--fno-stack-protector -fno-plt \
+# 极限优化
+CONFIG_TARGET_OPTIMIZATION="-Ofast -march=skylake -mtune=skylake -flto=auto -fuse-linker-plugin -fwhole-program \
+-fno-semantic-interposition -fvisibility=hidden -fno-stack-protector -fno-plt \
 -falign-functions=64 -falign-jumps=32 -falign-loops=32 \
 -ffast-math -fno-math-errno -funsafe-math-optimizations \
 -fno-trapping-math -fassociative-math -freciprocal-math \
@@ -116,7 +102,6 @@ CONFIG_TARGET_OPTIMIZATION="-Ofast -march=native -flto=auto -fuse-linker-plugin 
 -fmerge-all-constants -fno-unwind-tables -fno-asynchronous-unwind-tables \
 -mavx2 -mfma -mf16c -maes -mpclmul \
 -mbmi -mbmi2 -mlzcnt -mpopcnt -mabm -mrdrnd -mrdseed"
-
 
 # 启用 Link Time Optimization
 CONFIG_USE_LTO=y
