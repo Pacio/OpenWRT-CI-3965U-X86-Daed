@@ -100,22 +100,22 @@ CONFIG_TARGET_x86_64_Generic=y
 # -ffast-math -fassociative-math -freciprocal-math -fno-math-errno \
 # -fmerge-all-constants -frename-registers \
 # -fsplit-loops -fsched-pressure \
-# -mtune=skylake -mrecip -mfma -mavx2 -mbmi2 -mlzcnt -mpopcnt"
+# -mtune=skylake -mrecip -mfma -mavx2 -mbmi2 -mlzcnt -mpopcnt
 
-CONFIG_TARGET_OPTIMIZATION="-Ofast -pipe \
--march=skylake -mtune=skylake \
--mavx2 -mfma -mbmi2 -mlzcnt -mpopcnt -mabm \
--flto=auto -fuse-linker-plugin \
+CONFIG_TARGET_OPTIMIZATION="-Ofast -march=native -flto=auto -fuse-linker-plugin -fwhole-program \
 -fno-semantic-interposition -fvisibility=hidden \
+-fno-stack-protector -fno-plt \
 -falign-functions=64 -falign-jumps=32 -falign-loops=32 \
 -ffast-math -fno-math-errno -funsafe-math-optimizations \
 -fno-trapping-math -fassociative-math -freciprocal-math \
--ffinite-math-only -fno-signed-zeros \
+-ffinite-math-only -fno-signed-zeros -fno-ident \
 -fomit-frame-pointer -frename-registers -fstrict-aliasing \
 -fprefetch-loop-arrays -fgraphite-identity -floop-nest-optimize \
 -fsplit-loops -fsched-pressure -funroll-loops -fira-loop-pressure \
 -funswitch-loops -fipa-pta -fdevirtualize-at-ltrans -ftracer \
--fmerge-all-constants"
+-fmerge-all-constants -fno-unwind-tables -fno-asynchronous-unwind-tables \
+-mavx2 -mfma -mf16c -maes -mpclmul \
+-mbmi -mbmi2 -mlzcnt -mpopcnt -mabm -mrdrnd -mrdseed"
 
 
 # 启用 Link Time Optimization
