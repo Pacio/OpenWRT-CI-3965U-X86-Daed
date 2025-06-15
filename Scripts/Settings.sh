@@ -89,7 +89,8 @@ CONFIG_TARGET_x86_64_Generic=y
 # CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O3 -pipe -flto -fno-semantic-interposition -fvisibility=hidden -falign-functions=32 -fgraphite-identity -floop-nest-optimize -funsafe-loop-optimizations -funroll-loops -fira-loop-pressure"
 
 # 极限优化
-CONFIG_TARGET_OPTIMIZATION="-Ofast -march=skylake -mtune=skylake -flto=auto -fuse-linker-plugin -fwhole-program \
+# CONFIG_TARGET_OPTIMIZATION="-Ofast -march=skylake -mtune=skylake -flto=auto -fuse-linker-plugin -fwhole-program \
+CONFIG_TARGET_OPTIMIZATION="-O2 -march=skylake -mtune=skylake -flto=auto -fuse-linker-plugin -fwhole-program \
 -fno-semantic-interposition -fvisibility=hidden -fno-stack-protector -fno-plt \
 -falign-functions=64 -falign-jumps=32 -falign-loops=32 \
 -ffast-math -fno-math-errno -funsafe-math-optimizations \
