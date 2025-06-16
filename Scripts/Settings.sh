@@ -109,8 +109,8 @@ CONFIG_USE_LTO=y
 
 # 禁用 32 位 ABI
 # (lib32 非必须，可省略掉)
-# CONFIG_USE_MKLIBS is not set
-# CONFIG_TARGET_32BIT is not set
+CONFIG_USE_MKLIBS=n
+CONFIG_TARGET_32BIT=n
 
 # 使用高压缩率
 # CONFIG_TARGET_KERNEL_USE_XZ=y
@@ -131,7 +131,7 @@ CONFIG_DEFAULT_CPU_FREQ_GOV_PERFORMANCE=y
 CONFIG_PACKAGE_luci=y
 CONFIG_PACKAGE_luci-app-firewall=y
 CONFIG_PACKAGE_luci-app-upnp=y
-CONFIG_PACKAGE_luci-app-ddns=y
+# CONFIG_PACKAGE_luci-app-ddns=y
 CONFIG_PACKAGE_luci-app-adblock=y
 CONFIG_PACKAGE_kmod-igb=y
 CONFIG_PACKAGE_kmod-usb-net-rtl8152=y
