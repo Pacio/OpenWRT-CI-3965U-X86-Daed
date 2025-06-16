@@ -56,7 +56,8 @@ UPDATE_PACKAGE "passwall2" "xiaorouji/openwrt-passwall2" "main" "pkg"
 
 UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
 
-UPDATE_PACKAGE "alist" "sbwml/luci-app-alist" "main"
+# UPDATE_PACKAGE "alist" "sbwml/luci-app-alist" "main"
+UPDATE_PACKAGE "alist" "sbwml/luci-app-openlist" "dev"
 UPDATE_PACKAGE "ddns-go" "sirpdboy/luci-app-ddns-go" "main"
 UPDATE_PACKAGE "easytier" "EasyTier/luci-app-easytier" "main"
 UPDATE_PACKAGE "gecoosac" "lwb1978/openwrt-gecoosac" "main"
@@ -145,14 +146,14 @@ git_sparse_clone main https://github.com/kenzok8/small-package daed-next luci-ap
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages natter2 luci-app-natter2 luci-app-cloudflarespeedtest luci-app-nginx luci-app-nfs luci-app-caddy openwrt-caddy
 
 wget "https://alist4.lovelyy.eu.org/d/CloudFlareR2/immortalwrt/nginx/ngnx.conf?sign=FN_uiyymuja-Aj1z4I4Pevn3arIZXBdslq8Zjd_akdo=:0" -O ../feeds/packages/net/nginx-util/files/nginx.config
-echo 检测一下nginx的配置文件
+# echo 检测一下nginx的配置文件
 # cat ../feeds/packages/net/nginx-util/files/nginx.config
 
 fix_default_set() {
     # install -Dm755 "$BASE_PATH/patches/990_set_argon_primary" "$BUILD_DIR/package/base-files/files/etc/uci-defaults/990_set_argon_primary"
     # install -Dm755 "$BASE_PATH/patches/991_custom_settings" "$BUILD_DIR/package/base-files/files/etc/uci-defaults/991_custom_settings"
 
-    cp "./patches/991_custom_settings" "$BUILD_DIR/package/base-files/files/etc/uci-defaults/991_custom_settings.sh"
+    cp "./patches/991_custom_settings.sh" "$BUILD_DIR/package/base-files/files/etc/uci-defaults/991_custom_settings.sh"
 		chmod +x "$BUILD_DIR/package/base-files/files/etc/uci-defaults/991_custom_settings.sh"
 
 
