@@ -130,9 +130,9 @@ CONFIG_DEFAULT_CPU_FREQ_GOV_PERFORMANCE=y
 # 推荐通用网络组件（根据需要再裁剪）
 CONFIG_PACKAGE_luci=y
 CONFIG_PACKAGE_luci-app-firewall=y
-CONFIG_PACKAGE_luci-app-upnp=y
+# CONFIG_PACKAGE_luci-app-upnp=y
 # CONFIG_PACKAGE_luci-app-ddns=y
-CONFIG_PACKAGE_luci-app-adblock=y
+# CONFIG_PACKAGE_luci-app-adblock=y
 CONFIG_PACKAGE_kmod-igb=y
 CONFIG_PACKAGE_kmod-usb-net-rtl8152=y
 EOF
@@ -178,7 +178,7 @@ echo "CONFIG_PACKAGE_btop=y" >> ./.config
 # echo "CONFIG_PACKAGE_luci-app-alist=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-app-openlist=y" >> ./.config
 # 强大的工具Lucky大吉(需要添加源或git clone)
-echo "CONFIG_PACKAGE_luci-app-lucky=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-lucky=y" >> ./.config
 # 网络通信工具
 echo "CONFIG_PACKAGE_curl=y" >> ./.config
 echo "CONFIG_PACKAGE_tcping=y" >> ./.config
@@ -190,11 +190,11 @@ echo "CONFIG_PACKAGE_luci-app-diskman=y" >> ./.config
 echo "CONFIG_PACKAGE_cfdisk=y" >> ./.config
 # 其他调整
 # 大鹅
-echo "CONFIG_PACKAGE_luci-app-daed=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-daed=y" >> ./.config
 # 大鹅-next
 # echo "CONFIG_PACKAGE_luci-app-daed-next=y" >> ./.config
 # 连上ssh不会断开并且显示文件管理
-echo "CONFIG_PACKAGE_opeh-sftp-server"=y
+# echo "CONFIG_PACKAGE_opeh-sftp-server"=y
 # # docker只能集成
 # echo "CONFIG_PACKAGE_luci-app-dockerman=y" >> ./.config
 # Podman
@@ -204,10 +204,10 @@ echo "CONFIG_PACKAGE_luci-app-podman=y" >> ./.config
 # 添加Homebox内网测速
 # echo "CONFIG_PACKAGE_luci-app-homebox=y" >> ./.config
 # V2rayA
-echo "CONFIG_PACKAGE_luci-app-v2raya=y" >> ./.config
-echo "CONFIG_PACKAGE_v2ray-core=y" >> ./.config
-echo "CONFIG_PACKAGE_v2ray-geoip=y" >> ./.config
-echo "CONFIG_PACKAGE_v2ray-geosite=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-v2raya=y" >> ./.config
+# echo "CONFIG_PACKAGE_v2ray-core=y" >> ./.config
+# echo "CONFIG_PACKAGE_v2ray-geoip=y" >> ./.config
+# echo "CONFIG_PACKAGE_v2ray-geosite=y" >> ./.config
 # NSS的sqm
 # echo "CONFIG_PACKAGE_luci-app-sqm=y" >> ./.config
 # echo "CONFIG_PACKAGE_sqm-scripts-nss=y" >> ./.config
@@ -222,47 +222,47 @@ echo "CONFIG_PACKAGE_v2ray-geosite=y" >> ./.config
 # filebrowser-go
 # echo "CONFIG_PACKAGE_luci-app-filebrowser-go=y" >> ./.config
 # 图形化web UI luci-app-uhttpd	
-echo "CONFIG_PACKAGE_luci-app-uhttpd=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-uhttpd=y" >> ./.config
 # 多播
 # echo "CONFIG_PACKAGE_luci-app-syncdial=y" >> ./.config
 # MosDNS
-echo "CONFIG_PACKAGE_luci-app-mosdns=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-mosdns=y" >> ./.config
 # Natter2 报错
 # echo "CONFIG_PACKAGE_luci-app-natter2=y" >> ./.config
 # 文件管理器
-echo "CONFIG_PACKAGE_luci-app-filemanager=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-filemanager=y" >> ./.config
 # 不要coremark 避免多线程编译报错
 # echo "CONFIG_PACKAGE_coremark=n" >> ./.config
 # 基于Golang的多协议转发工具
-echo "CONFIG_PACKAGE_luci-app-gost=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-gost=y" >> ./.config
 # Go语言解析
 # echo "CONFIG_PACKAGE_golang=y" >> ./.config
 # Git
-echo "CONFIG_PACKAGE_git-http=y" >> ./.config
+# echo "CONFIG_PACKAGE_git-http=y" >> ./.config
 # Nginx替换Uhttpd
 echo "CONFIG_PACKAGE_nginx-mod-luci=y" >> ./.config
 # Nginx的图形化界面
-echo "CONFIG_PACKAGE_luci-app-nginx=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-nginx=y" >> ./.config
 # HAProxy 比Nginx更强大的反向代理服务器
-echo "CONFIG_PACKAGE_luci-app-haproxy-tcp=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-haproxy-tcp=y" >> ./.config
 # Adguardhome去广告
-echo "CONFIG_PACKAGE_luci-app-adguardhome=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-adguardhome=y" >> ./.config
 # cloudflre速度筛选器
 # echo "CONFIG_PACKAGE_luci-app-cloudflarespeedtest=y" >> ./.config
 # OpenClash
 echo "CONFIG_PACKAGE_luci-app-openclash=y" >> ./.config
 # nfs-kernel-server共享
-echo "CONFIG_PACKAGE_nfs-kernel-server=y" >> ./.config
+# echo "CONFIG_PACKAGE_nfs-kernel-server=y" >> ./.config
 # Kiddin9 luci-app-nfs
-echo "CONFIG_PACKAGE_luci-app-nfs=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-nfs=y" >> ./.config
 # zoneinfo-asia tzdata（时区数据库）的一部分，只包含亚洲相关的时区数据 zoneinfo-all全部时区（体积较大，不推荐在嵌入设备）
 echo "CONFIG_PACKAGE_zoneinfo-all=y" >> ./.config
 # Caddy
-echo "CONFIG_PACKAGE_luci-app-caddy=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-caddy=y" >> ./.config
 # luci-app-turboacc 适用于官方openwrt(22.03/23.05) firewall4的turboacc 包括以下功能：软件流量分载、Shortcut-FE、全锥型 NAT、BBR 拥塞控制算法
 echo "CONFIG_PACKAGE_luci-app-turboacc=y" >> ./.config
 
 # 中文
-echo "CONFIG_PACKAGE_luci-i18n-adblock-zh-cn=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-i18n-adblock-zh-cn=y" >> ./.config
 # 主题
 echo "CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=y" >> ./.config
