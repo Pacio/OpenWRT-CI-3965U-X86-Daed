@@ -31,50 +31,9 @@ sed -i "s/192\.168\.[0-9]*\.[0-9]*/$WRT_IP/g" $CFG_FILE
 #修改默认主机名
 sed -i "s/hostname='.*'/hostname='$WRT_NAME'/g" $CFG_FILE
 
-#配置文件修改
-echo "CONFIG_PACKAGE_luci=y" >> ./.config
-echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
-echo "CONFIG_PACKAGE_luci-theme-$WRT_THEME=y" >> ./.config
-echo "CONFIG_PACKAGE_luci-app-$WRT_THEME-config=y" >> ./.config
-
 #手动调整的插件
 if [ -n "$WRT_PACKAGE" ]; then
 	echo -e "$WRT_PACKAGE" >> ./.config
-fi
-
-# #高通平台调整
-# DTS_PATH="./target/linux/qualcommax/files/arch/arm64/boot/dts/qcom/"
-# if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
-# 	#取消nss相关feed
-# 	echo "CONFIG_FEED_nss_packages=n" >> ./.config
-# 	echo "CONFIG_FEED_sqm_scripts_nss=n" >> ./.config
-# 	#设置NSS版本
-# 	echo "CONFIG_NSS_FIRMWARE_VERSION_11_4=n" >> ./.config
-# 	echo "CONFIG_NSS_FIRMWARE_VERSION_12_5=y" >> ./.config
-# 	#开启sqm-nss插件
-# 	echo "CONFIG_PACKAGE_luci-app-sqm=y" >> ./.config
-# 	echo "CONFIG_PACKAGE_sqm-scripts-nss=y" >> ./.config
-# 	#无WIFI配置调整Q6大小
-# 	if [[ "${WRT_CONFIG,,}" == *"wifi"* && "${WRT_CONFIG,,}" == *"no"* ]]; then
-# 		find $DTS_PATH -type f ! -iname '*nowifi*' -exec sed -i 's/ipq\(6018\|8074\).dtsi/ipq\1-nowifi.dtsi/g' {} +
-# 		echo "qualcommax set up nowifi successfully!"
-# 	fi
-# fi
-
-if [[ $WRT_TARGET == *"X86"* ]]; then
-	echo "CONFIG_TARGET_OPTIONS=y" >> ./.config
- 	# 通用 x86_64 优化
-	# echo "CONFIG_TARGET_OPTIMIZATION=\"-O2 -pipe -march=x86-64 -mtune=generic\"" >> ./.config
- 	# 针对 Intel 或 AMD 处理器 适用于 Intel 6 代及更新（如 Coffee Lake、Comet Lake、Tiger Lake 等）
-  	# echo "CONFIG_TARGET_OPTIMIZATION=\"-O2 -pipe -march=skylake -mtune=skylake -mfpmath=sse -msse4.2 -mavx2 -mfma\"" >> ./.config
-  	# AMD Ryzen（Zen 及更新）适用于 AMD Ryzen（Zen、Zen 2、Zen 3、Zen 4）针对 Zen 3 架构优化（如果是 Zen 2，改为 znver2，Zen 4 用 znver4）优化 AVX2 代码
-   	# echo "CONFIG_TARGET_OPTIMIZATION=\"-O2 -pipe -march=znver3 -mtune=znver3 -mfpmath=sse -msse4.2 -mavx2 -mfma -mprefer-vector-width=256\"" >> ./.config
-
-	这个变量决定了 根文件系统（RootFS）分区的大小 默认是256M 单位MB
-    	echo "CONFIG_TARGET_ROOTFS_PARTSIZE=5120" >> .config
-
-	# 这个变量决定了内核分区的大小，通常是 16MB 或 32MB
-      	echo "CONFIG_TARGET_KERNEL_PARTSIZE=16" >> .config
 fi
 
 cat <<EOF > .config
@@ -7852,4 +7811,3 @@ CONFIG_PACKAGE_ucode-mod-lua=y
 # end of Font-Utils
 # end of Xorg
 EOF
-
