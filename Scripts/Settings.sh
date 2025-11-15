@@ -1764,13 +1764,6 @@ CONFIG_ZABBIX_POSTGRESQL=y
 # openwisp
 #
 # CONFIG_PACKAGE_netjson-monitoring is not set
-
-#
-# netjson-monitoring Configuration
-#
-CONFIG_NETJSON_MONITORING_IWINFO=y
-# end of netjson-monitoring Configuration
-
 # CONFIG_PACKAGE_openwisp-config is not set
 # CONFIG_PACKAGE_openwisp-monitoring is not set
 # end of openwisp
@@ -4561,6 +4554,7 @@ CONFIG_PACKAGE_glib2=y
 # CONFIG_PACKAGE_icu-data-tools is not set
 # CONFIG_PACKAGE_icu-full-data is not set
 # CONFIG_PACKAGE_iniparser is not set
+# CONFIG_PACKAGE_ivykis is not set
 CONFIG_PACKAGE_jansson=y
 # CONFIG_PACKAGE_json-glib is not set
 # CONFIG_PACKAGE_jsoncpp is not set
@@ -5210,7 +5204,7 @@ CONFIG_PACKAGE_luci-app-firewall=y
 # CONFIG_PACKAGE_luci-app-olsrd2 is not set
 # CONFIG_PACKAGE_luci-app-omcproxy is not set
 # CONFIG_PACKAGE_luci-app-openclash is not set
-CONFIG_PACKAGE_luci-app-openlist=y
+# CONFIG_PACKAGE_luci-app-openlist is not set
 # CONFIG_PACKAGE_luci-app-openthread is not set
 # CONFIG_PACKAGE_luci-app-openvpn is not set
 # CONFIG_PACKAGE_luci-app-openvpn-server is not set
@@ -5454,41 +5448,6 @@ CONFIG_PACKAGE_luci-i18n-diskman-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-firewall-yua is not set
 CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-firewall-zh-tw is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-ar is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-bg is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-bn is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-ca is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-cs is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-da is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-de is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-el is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-es is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-fi is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-fr is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-ga is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-he is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-hi is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-hu is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-it is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-ja is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-ko is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-lt is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-mr is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-ms is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-nl is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-no is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-pl is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-pt is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-pt-br is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-ro is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-ru is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-sk is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-sv is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-tr is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-uk is not set
-# CONFIG_PACKAGE_luci-i18n-openlist-vi is not set
-CONFIG_PACKAGE_luci-i18n-openlist-zh-cn=y
-# CONFIG_PACKAGE_luci-i18n-openlist-zh-tw is not set
 # CONFIG_PACKAGE_luci-i18n-package-manager-ar is not set
 # CONFIG_PACKAGE_luci-i18n-package-manager-bg is not set
 # CONFIG_PACKAGE_luci-i18n-package-manager-bn is not set
@@ -6667,7 +6626,7 @@ CONFIG_PACKAGE_odhcpd_ipv6only_ext_cer_id=0
 # CONFIG_PACKAGE_oor is not set
 # CONFIG_PACKAGE_open-iscsi is not set
 # CONFIG_PACKAGE_openelp is not set
-CONFIG_PACKAGE_openlist=y
+# CONFIG_PACKAGE_openlist is not set
 # CONFIG_PACKAGE_openthread-br is not set
 # CONFIG_PACKAGE_oping is not set
 # CONFIG_PACKAGE_oscam is not set
@@ -7726,4 +7685,5 @@ CONFIG_PACKAGE_ucode-mod-lua=y
 # CONFIG_PACKAGE_fontconfig is not set
 # end of Font-Utils
 # end of Xorg
+
 EOF
