@@ -38,7 +38,7 @@ jobs:
         # CONFIG: [MEDIATEK, ROCKCHIP, X86]
         CONFIG: [X86]
         SOURCE: [immortalwrt/immortalwrt]
-        BRANCH: [openwrt-24.10]
+        BRANCH: [openwrt-25.12]
 
     #调用公用编译核心WRT-CORE.yml
     uses: ./.github/workflows/WRT-CORE.yml
